@@ -1,0 +1,7 @@
+alibi-detect
+torch
+fairseq
+tensorflow
+librosa
+pandas
+wget
