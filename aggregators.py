@@ -22,7 +22,7 @@ class MeanAggregator:
 
 class PCAAggregator:
     def __init__(self):
-        pass
+        self.pca = PCA(n_components=1)
     def aggregate(self,embedding_seq):
         """
         Aggregrates an embedding sequence into fixed length vector by returning
@@ -33,7 +33,7 @@ class PCAAggregator:
         Outputs:
             embedding - fixed length vector of shape (1,embedding dim)
         """
-        pca = PCA(n_components=1)
-        pca.fit(embedding_seq[0,:,:].T)
-        return np.copy(pca.components_)
+        
+        self.pca.fit(embedding_seq[0,:,:].T)
+        return np.copy(self.pca.components_)
 
