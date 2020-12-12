@@ -12,6 +12,14 @@ from fairseq.models.wav2vec import Wav2VecModel
 
 class Wav2VecEmbeddor:
     def __init__(self,weight_path=None,use_cpu=True):
+        """
+        Initialize an embeddor that uses the Wav2Vec model.
+
+        Inputs:
+            weight_path - path to an instance of pt file corresponding to the 
+            wav2vec_large model
+            use_cpu - boolean, whether to use cpu or gpu
+        """
         if weight_path is None:
             print('Downloading wav2vec model')
             if not os.path.exists('models'):
