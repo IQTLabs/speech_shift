@@ -5,4 +5,5 @@ tensorflow
 tensorflow_hub
 librosa
 pandas
+seaborn
 wget

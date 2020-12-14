@@ -33,6 +33,6 @@ def pipeline(wav_list=None,file_list=None,embeddor=None,aggregator=None):
     def converter(waveform):
         emb_seq = embeddor.embed(waveform)
         return aggregator.aggregate(emb_seq)
-    vec_list = list(map(converter,wav_list))
+    vec_list = list(map(converter,tqdm.tqdm(wav_list)))
     return np.concatenate(vec_list)
 
