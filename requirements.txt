@@ -2,6 +2,7 @@ alibi-detect
 torch
 fairseq
 tensorflow
+tensorflow_hub
 librosa
 pandas
 wget
